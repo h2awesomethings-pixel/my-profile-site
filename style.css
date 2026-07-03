@@ -56,6 +56,21 @@
   color: rgb(156 163 175);
 }
 
+/* ── Ongoing badge ───────────────────────────────────────── */
+.badge-ongoing {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgb(209 250 229);
+  color: rgb(4 120 87);
+}
+.dark .badge-ongoing {
+  background: rgb(6 78 59 / 0.4);
+  color: rgb(110 231 183);
+}
+
 /* ── Navbar: scrolled state (set by JS) ──────────────────── */
 .navbar-scrolled {
   background: rgba(255,255,255,0.88);

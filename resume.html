@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이력서 | 정현화</title>
+  <meta name="description" content="정현화 이력서 — Java/Spring 백엔드 개발자. 결제·인증 도메인, 대용량 트래픽 성능 개선, 시스템 구축 경험." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="이력서 | 정현화" />
+  <meta property="og:description" content="Java/Spring 백엔드 개발자. 결제·인증 도메인, 대용량 트래픽 성능 개선, 시스템 구축 경험." />
+  <meta property="og:url" content="https://h2awesomethings-pixel.github.io/my-profile-site/resume.html" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 렌더링된 이력서 타이포그래피 보정 */
+    #resumeContent h1 { margin-bottom: 0.5em; }
+    /* typography 플러그인이 h5는 스타일링하지 않으므로 직접 지정 */
+    #resumeContent h5 { font-size: 1.05rem; font-weight: 700; margin-top: 1.8em; margin-bottom: 0.6em; color: rgb(17 24 39); }
+    .dark #resumeContent h5 { color: rgb(255 255 255); }
+    #resumeContent h4 { border-bottom: 1px solid rgb(229 231 235); padding-bottom: 0.4em; }
+    .dark #resumeContent h4 { border-bottom-color: rgb(31 41 55); }
+
+    /* 인쇄(PDF 저장) 최적화 */
+    .print-only { display: none; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      body { background: #fff !important; }
+      main { max-width: none !important; padding: 0 !important; }
+      #resumeContent h2, #resumeContent h3, #resumeContent h4, #resumeContent h5 { break-after: avoid; }
+      #resumeContent p, #resumeContent li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="font-sans bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Toolbar -->
+  <nav class="no-print sticky top-0 z-50 bg-white/88 dark:bg-gray-950/88 backdrop-blur border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        메인으로
+      </a>
+      <div class="flex items-center gap-3">
+        <button onclick="window.print()" class="px-4 py-1.5 text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors">
+          PDF 저장 / 인쇄
+        </button>
+        <button id="darkToggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
+          <svg class="w-4 h-4 text-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.591-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 00-1.06 1.06l1.591 1.59a.75.75 0 001.06-1.061L6.166 6.166z" />
+          </svg>
+          <svg class="w-4 h-4 text-gray-600 block dark:hidden" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10 lg:py-14">
+    <article id="resumeContent" class="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-20">
+      <p class="text-gray-400">이력서를 불러오는 중입니다…</p>
+    </article>
+
+    <!-- Contact: 화면에서는 버튼, 인쇄(PDF)에서는 텍스트로 노출 -->
+    <div class="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
+      <div class="no-print flex flex-wrap items-center gap-3">
+        <a href="https://github.com/h2awesomethings-pixel" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-gray-800 text-white text-sm font-semibold rounded-xl hover:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:h2.awesomethings@gmail.com"
+           class="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Email
+        </a>
+      </div>
+      <p class="print-only text-sm text-gray-600">GitHub: github.com/h2awesomethings-pixel &nbsp;·&nbsp; Email: h2.awesomethings@gmail.com</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // 다크 모드: 메인 페이지(script.js)와 같은 localStorage 키 공유
+    const html = document.documentElement;
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) html.classList.add('dark');
+    })();
+    document.getElementById('darkToggle').addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // 인쇄 시 라이트 모드로 강제 전환 후 복원
+    let wasDark = false;
+    window.addEventListener('beforeprint', () => {
+      wasDark = html.classList.contains('dark');
+      html.classList.remove('dark');
+    });
+    window.addEventListener('afterprint', () => {
+      if (wasDark) html.classList.add('dark');
+    });
+
+    // 이력서 원본(docs/resume.md)을 그대로 렌더링 — 원본 한 곳만 관리
+    fetch('docs/resume.md')
+      .then(res => {
+        if (!res.ok) throw new Error(res.status);
+        return res.text();
+      })
+      .then(md => {
+        const el = document.getElementById('resumeContent');
+        el.innerHTML = marked.parse(md);
+        // 카드 앵커용 헤딩 id 부여 — 말미 날짜 괄호는 제외해서 날짜를 갱신해도 링크가 유지되게 함
+        el.querySelectorAll('h2, h3, h4, h5').forEach(h => {
+          h.id = h.textContent.trim().replace(/\s*\(\d{4}[^)]*\)\s*$/, '').replace(/\s+/g, '-');
+        });
+        // md 비동기 렌더링이 끝난 뒤에 해시 위치로 이동
+        if (location.hash) {
+          const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          if (target) target.scrollIntoView();
+        }
+      })
+      .catch(() => {
+        document.getElementById('resumeContent').innerHTML =
+          '<p>이력서를 불러오지 못했습니다. <a href="docs/resume.md">원본 파일</a>을 직접 확인해주세요.</p>';
+      });
+  </script>
+</body>
+</html>
